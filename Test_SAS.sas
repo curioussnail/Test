@@ -7,3 +7,9 @@ proc sort data=test noprint;
 by entry_id;
 run;
 
+proc means data=test;
+by class;
+output out=tsum sum(e)=e;
+run;
+
+
